@@ -8,17 +8,18 @@ public class Avion extends Personajes {
 		
 		super(peso, nombre, modelo, velocidad, danio, tipoAtaque, opcion);
 		
-		// this.tipoAvion = tipoAvion;
+		this.tipoAvion = tipoAvion;
 	}
 	
 	
 	public void menu() {
 		
 	System.out.println("Selecciona una opcion");
-    System.out.println("'1'para seleccionar un avion caza");
-    System.out.println("'2'para seleccionar un avion tipo");
-    System.out.println("'3' para mostrar la informacion");
-    System.out.println("'4' para salir");
+	System.out.println("'1' para mostrar la informacion de cada avion");
+    System.out.println("'2'para seleccionar un avion caza F16");
+    System.out.println("'3'para seleccionar un avion caza F35");
+	System.out.println("'4'para seleccionar un avion caza J20");
+    System.out.println("'5' para salir");
 	}
 
 	
