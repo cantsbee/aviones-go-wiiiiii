@@ -1,5 +1,4 @@
 package Juego;
-
 public class CazaF16 extends Avion{
 	double danio;
 	double defensa;
@@ -16,6 +15,4 @@ public class CazaF16 extends Avion{
 		velocidad = velocidad2;
 		this.herramienta = herramienta;
 	}
-	
-	
 }

@@ -20,6 +20,7 @@ public class Avion extends Personajes {
     System.out.println("'3'para seleccionar un avion caza F35");
 	System.out.println("'4'para seleccionar un avion caza J20");
     System.out.println("'5' para salir");
+	System.out.println();
 	}
 
 	
