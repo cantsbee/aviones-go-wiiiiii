@@ -192,7 +192,7 @@ public class AppJuego {
         lector.close();
     }
 
-    private static void ejecutarTurno(Personaje atacante, Personaje defensor, Scanner lector) {
+    public static void ejecutarTurno(Personaje atacante, Personaje defensor, Scanner lector) {
         System.out.println("\nTurno de " + atacante.getNombre());
         System.out.println("¿Qué deseas hacer? '1' Atacar  '2' Activar Habilidad");
         int accion = lector.nextInt();
@@ -204,7 +204,7 @@ public class AppJuego {
         }
     }
 
-private static int OpcionValida(Scanner lector) {
+public static int OpcionValida(Scanner lector) {
     int opcion = 0;
     while (true) {
         System.out.println("Ingresa tu elección: ");
@@ -222,7 +222,7 @@ private static int OpcionValida(Scanner lector) {
     }
 }
 
-    private static Personaje crearPersonaje(int eleccion, String nombre) {
+    public static Personaje crearPersonaje(int eleccion, String nombre) {
         switch (eleccion) {
             case 1:
             System.out.println("Has elegido un caza F16");
@@ -236,7 +236,7 @@ private static int OpcionValida(Scanner lector) {
             System.out.println("            / | | | | //");
             System.out.println("           |  | | | |  |");
             System.out.println("           |__|_|_|_|__|");;
-            return new F16(nombre);
+            return new CazaF16(nombre);
             case 2:
             System.out.println("Has elegido un Caza F35");
             System.out.println("             __|__");

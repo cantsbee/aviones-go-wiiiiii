@@ -1,5 +1,5 @@
 package juego;
-abstract class Avion extends Personaje {
+public abstract class Avion extends Personaje {
     protected int velocidad;
     protected int maniobrabilidad;
     
