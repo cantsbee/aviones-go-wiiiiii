@@ -61,8 +61,12 @@ public class AppJuego {
         if (eleccion1 == 1) {
             jugador1 = new F16(nombre1);
 
-        } else {
+        } else if(eleccion1 == 2){
+            jugador1 = new F35 (nombre1);
+
+        }else if (eleccion1 == 2) {
             jugador1 = new PortaavionesClaseNimitz(nombre1);
+        
         }
         
         System.out.println("Jugador 1, elige tu personaje: '1' Caza F16 \n'2' CazaF35 \n'3' Caza J20, \n '4' Portaaviones Clase Nimitz");

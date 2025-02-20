@@ -1,6 +1,6 @@
 package juego;
 
-class CazaF35 extends Avion {
+public class CazaF35 extends Avion {
 
     public CazaF35(String nombre) {
         super(nombre, 1200, 80, 450);
