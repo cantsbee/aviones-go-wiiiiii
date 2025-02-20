@@ -21,8 +21,15 @@ public class F16 extends Avion {
     }
 
     // public void habilidadEspecial(){
-    //     int[] danos = {40, 60, 80};
-    //     int danio = danos[random.nextInt(danos.length)];
-    //     enemigo.recibirDanio(danio);
-    // }
+    //      int[] danos = {40, 60, 80};
+    //      int danio = danos[random.nextInt(danos.length)];
+    //      ;
+    //  }
+    public void habilidadEspecial(Personaje enemigo) {
+        int[] danos = {40, 60, 80};
+        int danio = danos[random.nextInt(danos.length)];
+        String[] sonidos = {"oaaa", "eeaa", "pumbaaa"};
+        System.out.println(sonidos[random.nextInt(sonidos.length)]);
+        enemigo.recibirDanio(danio);
+    }
 }

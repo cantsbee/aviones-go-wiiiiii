@@ -36,6 +36,5 @@ public abstract class Personaje {
     }
     public abstract void atacar(Personaje enemigo);
     public abstract void activarHabilidad();
-
-    // protected abstract void habilidadEspecial();
+    public abstract void habilidadEspecial(Personaje enemigo);
 }

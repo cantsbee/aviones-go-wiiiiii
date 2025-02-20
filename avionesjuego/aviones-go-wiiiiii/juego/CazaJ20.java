@@ -19,10 +19,11 @@ class CazaJ20 extends Avion {
     public void activarHabilidad() {
         System.out.println(nombre + " activa Camuflaje, el próximo ataque enemigo fallará!");
     }
-    // public void habilidadEspecial(){
-    //     int[] danos = {40, 60, 80};
-    //     int danio = danos[random.nextInt(danos.length)];
-    //     enemigo.recibirDanio(danio);
-    // }
+    
+    public void habilidadEspecial(Personaje enemigo){
+        int[] danos = {40, 60, 80};
+        int danio = danos[random.nextInt(danos.length)];
+        enemigo.recibirDanio(danio);
+    }
 }
 
