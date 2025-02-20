@@ -8,9 +8,7 @@ public abstract class Portaaviones extends Personaje {
             super(nombre, 500);
             this.capacidadAviones = capacidadAviones;
             this.blindaje = blindaje;
-            
         }
-        
         public int getCapacidadAviones() {
             return capacidadAviones;
         }
@@ -18,6 +16,5 @@ public abstract class Portaaviones extends Personaje {
         public int getBlindaje() {
             return blindaje;
         }
-
     }
     

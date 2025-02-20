@@ -1,7 +1,6 @@
 package juego;
 import java.util.Random;
 
-// Clase abstracta Personaje
 public abstract class Personaje {
     protected String nombre;
     protected int vida;
@@ -38,3 +37,6 @@ public abstract class Personaje {
     public abstract void activarHabilidad();
     public abstract void habilidadEspecial(Personaje enemigo);
 }
+
+
+
