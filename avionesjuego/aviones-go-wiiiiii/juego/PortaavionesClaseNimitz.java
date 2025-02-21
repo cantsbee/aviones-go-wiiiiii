@@ -19,15 +19,9 @@ public class PortaavionesClaseNimitz extends Portaaviones {
     }
     @Override
     public void activarHabilidad() {
+        protegido=true;
         System.out.println(nombre + " activa Escudo Defensivo, reduce el daño recibido a la mitad!");
     }
     
-    public void habilidadEspecial(Personaje enemigo) {
-        int[] danos = {40, 60, 80};
-        int danio = danos[random.nextInt(danos.length)];
-        String[] sonidos = {"oaaa", "eeaa", "pumbaaa"};
-        System.out.println(sonidos[random.nextInt(sonidos.length)]);
-        enemigo.recibirDanio(danio);
-    }
 }
 

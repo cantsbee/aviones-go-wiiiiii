@@ -31,7 +31,7 @@
 package juego;
 
 public class CazaF35 extends Avion {
-    protected static int[] Danios = {10, 20, 35};
+    protected static int[] Danios = {13, 22, 36};
     protected static String[] Sonidos = {"oaaa", "eeaa", "pumbaaa"};
 
     public CazaF35(String nombre) {
@@ -40,21 +40,21 @@ public class CazaF35 extends Avion {
 
     @Override
     public void atacar(Personaje enemigo) {
+        
         int danio = Danios[random.nextInt(Danios.length)];
         System.out.println(Sonidos[random.nextInt(Sonidos.length)]);
+        if(activarHabilidad){
+            danio*=2;
+        }
         enemigo.recibirDanio(danio);
+        
+       
     }
 
     @Override
     public void activarHabilidad() {
         System.out.println(nombre + " activa Velocidad Supersónica, duplica su próximo ataque!");
     }
-    @Override
-    public void habilidadEspecial(Personaje enemigo){
-        int[] danos = {40, 60, 80};
-        int danio = danos[random.nextInt(danos.length)];
-        enemigo.recibirDanio(danio);
-     }
  }
 
 
