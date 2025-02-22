@@ -4,7 +4,11 @@ import java.util.*;
 public class AppJuego { 
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
-        System.out.println("\n*********************************************\n              BIENVENIDO AL JUEGO!        \n*********************************************\n");
+        System.out.println("\n*********************************************\n              BIENVENIDO AL JUEGO!        \n*********************************************\n Eres un piloto de élite de la resistencia, nuestra última esperanza. Tu escuadrón ha sido diezmado, y ahora solo quedas tú entre el enemigo y la libertad.\n" + //
+                        "\n" + //
+                        "El cielo es tu campo de batalla.\n" + //
+                        "\n" + //
+                        "La guerra ha comenzado. ¿Estás listo para volar?");
         System.out.println("Selecciona 1 para iniciar batalla, 2 para mostrar stats de cada personaje. Elige con cuidado, soldado!")
         int elegir=lector.nextInt();
         if (elegir==1) {
@@ -13,7 +17,7 @@ public class AppJuego {
         int elegir=lector.nextInt();
         if (elegir==1) {
 
-            Syste.out.println("")
+            System.out.println("");
         }
         
         System.out.println("Jugador 1, elige tu personaje:\n '1' Caza F16 \n'2' Caza F35 \n'3' Caza J20 \n'4' Portaaviones Clase Nimitz");
