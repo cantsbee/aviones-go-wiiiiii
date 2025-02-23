@@ -46,10 +46,10 @@ public class AppJuego {
         System.out.println("esc");
         int opcionn=lector.nextInt();
         if(opcionn==1){
-            CazaF16.Mostradatos
-         }else if(){
+            CazaF16.mostrarDatos();
+        //  }else if(){
 
-         }
+        //  }
         
     }
 }
