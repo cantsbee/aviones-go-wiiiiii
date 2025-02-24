@@ -40,10 +40,10 @@ public class AppJuego {
             ejecutarTurno(jugador2, jugador1, lector);
         }
 
-        System.out.println("\nJuego terminado.");
+        System.out.println("\n Has luchado hasta el final, soldado. Ahora puedes descansar.");
        
     }else if(elegir==2){
-        System.out.println("escoje de que avion quieres ver sus caracteristicas '1' para caza F16, '2' para Caza F35, '3' para Caza J20, '4' para portaaviones clase Nimitz, '5' para cancelar");
+        System.out.println("escoje de que avion quieres ver sus caracteristicas '1' para caza F16, '2' para Caza F35, '3' para Caza J20, '4' para portaaviones clase Nimitz,  '5' para portaaviones clase Kusnetsov,  '6' para portaaviones clase QueenElizabeth,  '7' para salir");
         int opcionn=lector.nextInt();
         if(opcionn==1){
             CazaF16.mostrarDatos();
@@ -54,10 +54,14 @@ public class AppJuego {
                 }else if(opcionn==4){
                     PortaavionesClaseNimitz.mostrarDatos();
                     }else if(opcionn==5){
-                        System.out.println("saliendo...");
-                    }else{
-                        System.out.println("opcion invalida");
-                    }
+                    PortaavionesClaseKusnetsov.mostrarDatos();
+                        }else if(opcionn==6){
+                        PortaavionesClaseQueenElizabeth.mostrarDatos();
+                            }else if(opcionn==7){
+                            System.out.println("saliendo...");
+                                }else{
+                        System.out.println("opcion no válida");}
+                    
                     
                   }
 }
