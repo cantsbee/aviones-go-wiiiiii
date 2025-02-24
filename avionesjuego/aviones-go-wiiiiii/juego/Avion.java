@@ -10,6 +10,9 @@ public abstract class Avion extends Personaje {
     super(nombre, vida);
         this.velocidad = velocidad;
         this.maniobrabilidad = maniobrabilidad;
+        this.alturaMaxima=alturaMaxima;
+        this.armamento=armamento;
+        this.autonomia=autonomia;
     }
     
     public int getVelocidad() {
