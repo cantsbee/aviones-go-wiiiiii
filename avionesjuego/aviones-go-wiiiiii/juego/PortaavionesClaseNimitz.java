@@ -2,7 +2,7 @@ package juego;
 
 public class PortaavionesClaseNimitz extends Portaaviones {
     public PortaavionesClaseNimitz(String nombre) {
-        super(nombre, 90, 300, 400);
+        super(nombre, 120, 350, 600, "Misiles", 300, 620);
     }
     
     @Override
@@ -15,12 +15,15 @@ public class PortaavionesClaseNimitz extends Portaaviones {
     }
     @Override
     public int getVida(){
-        return 800;
+        return vida;
     }
     @Override
     public void activarHabilidad() {
         protegido=true;
         System.out.println(nombre + " activa Escudo Defensivo, reduce el daño recibido a la mitad!");
+    }
+    public static void mostrarDatos(){
+        System.out.println("Las características de este portaaviones son: \n daño = {10, 20, 35}; \n capacidad de aviones: 90 \n blindaje: 300 \n vida=400");
     }
     
 }

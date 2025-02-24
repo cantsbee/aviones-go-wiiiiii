@@ -1,7 +1,6 @@
 package juego;
 import java.util.*;
 
-import Juego.portaaviones;
 
 public class AppJuego { 
     public static void main(String[] args) {
@@ -10,27 +9,25 @@ public class AppJuego {
                         "\n" + //
                         "El cielo es tu campo de batalla.\n" + //
                         "\n" + //
-                        "La guerra ha comenzado. ¿Estás listo para volar?");
-        System.out.println("Selecciona 1 para iniciar batalla, 2 para mostrar stats de cada personaje. Elige con cuidado, soldado!")
-        int elegir=lector.nextInt();
-        if (elegir==1) {
-        System.out.println("\nJugador 1, elige tu personaje:\n'1' Caza F16 \n'2' Caza F35 \n'3' Caza J20 \n'4' Portaaviones Clase Nimitz");
-        System.out.println("Selecciona 1 para iniciar batalla, 2 para mostrar stats de cada personaje. Elige con cuidado, soldado!")
-        int elegir=lector.nextInt();
-        if (elegir==1) {
+                        "La guerra ha comenzado. ¿Estás listo para volar?\n"
+                        );
 
-            System.out.println("");
-        }
-        
-        System.out.println("Jugador 1, elige tu personaje:\n '1' Caza F16 \n'2' Caza F35 \n'3' Caza J20 \n'4' Portaaviones Clase Nimitz");
+
+
+        System.out.println("\n************************************************************************************************************\n");
+        System.out.println("\nSelecciona 1 para iniciar batalla, 2 para mostrar stats de cada personaje. Elige con cuidado, soldado!\n");
+        System.out.println("\n************************************************************************************************************\n");
+        int elegir=lector.nextInt();
+        if (elegir==1) {
+        System.out.println("\nJugador 1, elige tu personaje:\n'1' Caza F16 \n'2' Caza F35 \n'3' Caza J20 \n'4' Portaaviones Clase Nimitz\n'5' Portaaviones clase Kusnetsov\n'6' Portaavion clase Queen Elizabeth");
         int eleccion1 = OpcionValida(lector);
         System.out.println("\nIngresa el nombre de tu aeronave: ");
         lector.nextLine();
         String nombre1 = lector.nextLine();
         
         Personaje jugador1 = crearPersonaje(eleccion1, nombre1);
-
-        System.out.println("\nJugador 2, elige tu personaje:\n'1' Caza F16 \n'2' Caza F35 \n'3' Caza J20 \n'4' Portaaviones Clase Nimitz");
+        
+        System.out.println("\nJugador 1, elige tu personaje:\n'1' Caza F16 \n'2' Caza F35 \n'3' Caza J20 \n'4' Portaaviones Clase Nimitz\n'5' Portaaviones clase Kusnetsov\n'6' Portaavion clase Queen Elizabeth");
         int eleccion2 = OpcionValida(lector);
         System.out.println("\nIngresa el nombre de tu aeronave: ");
         lector.nextLine();
@@ -39,14 +36,14 @@ public class AppJuego {
 
         while (jugador1.getVida() > 0 && jugador2.getVida() > 0) {
             ejecutarTurno(jugador1, jugador2, lector);
-            if (jugador2.getVida() <= 0) break;
+            if (jugador2.getVida() <= 0 || jugador1.getVida() <= 0) break;
             ejecutarTurno(jugador2, jugador1, lector);
         }
 
         System.out.println("\nJuego terminado.");
-        lector.close();
+       
     }else if(elegir==2){
-        System.out.println("esc");
+        System.out.println("escoje de que avion quieres ver sus caracteristicas '1' para caza F16, '2' para Caza F35, '3' para Caza J20, '4' para portaaviones clase Nimitz, '5' para cancelar");
         int opcionn=lector.nextInt();
         if(opcionn==1){
             CazaF16.mostrarDatos();
@@ -55,15 +52,14 @@ public class AppJuego {
             }else if(opcionn==3){
             CazaJ20.mostrarDatos();
                 }else if(opcionn==4){
-                    portaaviones.mostrarDatos();
-                        else{
-                            System.out.println("elige una opción válida.");
-                        }
-            
-                
-
-        
-    }
+                    PortaavionesClaseNimitz.mostrarDatos();
+                    }else if(opcionn==5){
+                        System.out.println("saliendo...");
+                    }else{
+                        System.out.println("opcion invalida");
+                    }
+                    
+                  }
 }
 
     public static void ejecutarTurno(Personaje atacante, Personaje defensor, Scanner lector) {
@@ -84,7 +80,7 @@ public static int OpcionValida(Scanner lector) {
         System.out.println("\nIngresa tu elección: ");
         try {
             opcion = lector.nextInt();
-            if (opcion >= 1 && opcion <= 4) {
+            if (opcion >= 1 && opcion <= 7) {
                 return opcion;
             } else {
                 System.out.println("\nNúmero fuera de rango, intenta de nuevo.");
@@ -114,6 +110,7 @@ public static int OpcionValida(Scanner lector) {
             System.out.println("           |  | | | |  |");
             System.out.println("           |__|_|_|_|__|");;
             return new CazaF16(nombre);
+
             case 2:
             System.out.println("\nHas elegido un Caza F35\n");
             System.out.println("             __|__");
@@ -148,6 +145,42 @@ public static int OpcionValida(Scanner lector) {
             System.out.println("          \\_____________________________________________/");
 
             return new PortaavionesClaseNimitz(nombre);
+
+            case 5:
+            System.out.println("Has elegido un portaavion clase Kusnetsov");
+                    System.out.println("             |");
+                    System.out.println("             | \\");
+                    System.out.println("             |  \\");
+                    System.out.println("             |   \\");
+                    System.out.println("   _________________________");
+                    System.out.println("  |                         |");
+                    System.out.println("  |    Portaaviones Kusnetsov   |");
+                    System.out.println("  |_________________________|");
+                    System.out.println("      |  |      |  |      |  |");
+                    System.out.println("      |  |      |  |      |  |");
+                    System.out.println("      |  |      |  |      |  |");
+                    System.out.println("  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                    System.out.println("      |        |        |        |");
+                    System.out.println("      |________|________|________|");
+
+                    return new PortaavionesClasekusnetsov(nombre);
+
+            case 6:
+            System.out.println("has elegido un avion clase Queen Elizabeth");
+            System.out.println("          |");
+            System.out.println("          | \\");
+            System.out.println("          |  \\");
+            System.out.println("          |   \\");
+            System.out.println("  _____________________");
+            System.out.println(" |                     |");
+            System.out.println(" |      Queen Elizabeth   |");
+            System.out.println(" |_____________________|");
+            System.out.println("    |  |    |  |    |  |");
+            System.out.println("    |  |    |  |    |  |");
+            System.out.println("    |  |    |  |    |  |");
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            return new PortaavionesClaseQueenElizabeth(nombre);
+
             default:
                 System.out.println("\nOpción incorrecta, se te asignara un avion por defecto");
                 return new CazaJ20(nombre);

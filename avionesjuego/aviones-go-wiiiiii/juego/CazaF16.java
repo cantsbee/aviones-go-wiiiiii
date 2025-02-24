@@ -2,11 +2,11 @@
 package juego;
 
 public class CazaF16 extends Avion {
-    private static int[] Danios = {10, 20, 35};
-    private static String[] Sonidos = {"oaaa", "eeaa", "pumbaaa"};
+    protected static int[] Danios = {10, 20, 35};
+    protected static String[] Sonidos = {"oaaa", "eeaa", "pumbaaa"};
 
     public CazaF16(String nombre) {
-        super(nombre, 900, 85, 350);
+        super(nombre, 900, 85, 350,15000,"Misiles",60);
     }
 
     @Override
@@ -19,7 +19,6 @@ public class CazaF16 extends Avion {
         }
         enemigo.recibirDanio(danio);
         
-       
     }
 
     @Override
