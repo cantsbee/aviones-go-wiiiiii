@@ -24,4 +24,8 @@ public class CazaJ20 extends Avion {
     public void activarHabilidad() {
         System.out.println(nombre + " activa Velocidad Supersónica, duplica su próximo ataque!");
     }
+
+    public static void mostrarDatos() {
+        System.out.println("Las características de este caza son: \n daño = {20, 40, 60} \n velocidad= 900 \n maniobrabilidad= 85 \n vida=350");
+    }
 }

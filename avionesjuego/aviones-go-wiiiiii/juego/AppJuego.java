@@ -1,6 +1,8 @@
 package juego;
 import java.util.*;
 
+import Juego.portaaviones;
+
 public class AppJuego { 
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
@@ -25,6 +27,7 @@ public class AppJuego {
         System.out.println("\nIngresa el nombre de tu aeronave: ");
         lector.nextLine();
         String nombre1 = lector.nextLine();
+        
         Personaje jugador1 = crearPersonaje(eleccion1, nombre1);
 
         System.out.println("\nJugador 2, elige tu personaje:\n'1' Caza F16 \n'2' Caza F35 \n'3' Caza J20 \n'4' Portaaviones Clase Nimitz");
@@ -47,9 +50,18 @@ public class AppJuego {
         int opcionn=lector.nextInt();
         if(opcionn==1){
             CazaF16.mostrarDatos();
-        //  }else if(){
+         }else if(opcionn==2){
+            CazaF35.mostrarDatos();
+            }else if(opcionn==3){
+            CazaJ20.mostrarDatos();
+                }else if(opcionn==4){
+                    portaaviones.mostrarDatos();
+                        else{
+                            System.out.println("elige una opción válida.");
+                        }
+            
+                
 
-        //  }
         
     }
 }
