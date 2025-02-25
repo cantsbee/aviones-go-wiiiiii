@@ -36,11 +36,18 @@ public class AppJuego {
                 
                 while (jugador1.getVida() > 0 && jugador2.getVida() > 0) {
                     ejecutarTurno(jugador1, jugador2, lector);
-                    if (jugador2.getVida() <= 0 || jugador1.getVida() <= 0) break;
+                    if (jugador2.getVida() <= 0) {
+                        System.out.println("\n" + jugador2.getNombre() + " ha sido derrotado. ¡" + jugador1.getNombre() + " gana la batalla!");
+                        break;
+                    }
                     ejecutarTurno(jugador2, jugador1, lector);
+                    if (jugador1.getVida() <= 0) {
+                        System.out.println("\n" + jugador1.getNombre() + " ha sido derrotado. ¡" + jugador2.getNombre() + " gana la batalla!");
+                        break;
+                    }
                 }
-                
-                System.out.println("\nHas luchado hasta el final, soldado. Ahora puedes descansar.");
+                System.out.println("\nFin del juego.");
+                break;
             } else if (elegir == 2) {
                 while (true) {
                     System.out.println("Escoge el avión para ver sus características:");
