@@ -10,50 +10,58 @@ public class AppJuego {
         
         System.out.println("\nEl cielo es tu campo de batalla.\n\nLa guerra ha comenzado. ¿Estás listo para volar?\n");
 
-        System.out.println("\n************************************************************************************************************\n");
-        System.out.println("\nSelecciona 1 para iniciar batalla, 2 para mostrar stats de cada personaje. Elige con cuidado, soldado!\n");
-        System.out.println("\n************************************************************************************************************\n");
-        
-        int elegir = OpcionValida(lector, 1, 2);
-        
-        if (elegir == 1) {
-            System.out.println("\nJugador 1, elige tu personaje:");
-            mostrarOpcionesPersonaje();
-            int eleccion1 = OpcionValida(lector, 1, 6);
-            lector.nextLine();
-            System.out.println("\nIngresa el nombre de tu aeronave: ");
-            String nombre1 = lector.nextLine();
-            Personaje jugador1 = crearPersonaje(eleccion1, nombre1);
+        while (true) {
+            System.out.println("\n************************************************************************************************************\n");
+            System.out.println("\nSelecciona 1 para iniciar batalla, 2 para mostrar stats de cada personaje, 3 para salir. Elige con cuidado, soldado!\n");
+            System.out.println("\n************************************************************************************************************\n");
             
-            System.out.println("\nJugador 2, elige tu personaje:");
-            mostrarOpcionesPersonaje();
-            int eleccion2 = OpcionValida(lector, 1, 6);
-            lector.nextLine();
-            System.out.println("\nIngresa el nombre de tu aeronave: ");
-            String nombre2 = lector.nextLine();
-            Personaje jugador2 = crearPersonaje(eleccion2, nombre2);
+            int elegir = OpcionValida(lector, 1, 3);
             
-            while (jugador1.getVida() > 0 && jugador2.getVida() > 0) {
-                ejecutarTurno(jugador1, jugador2, lector);
-                if (jugador2.getVida() <= 0 || jugador1.getVida() <= 0) break;
-                ejecutarTurno(jugador2, jugador1, lector);
-            }
-            
-            System.out.println("\nHas luchado hasta el final, soldado. Ahora puedes descansar.");
-        } else {
-            System.out.println("Escoge el avión para ver sus características:");
-            mostrarOpcionesPersonaje();
-            System.out.println("'7' para salir");
-            int opcionn = OpcionValida(lector, 1, 7);
-            
-            switch (opcionn) {
-                case 1 -> CazaF16.mostrarDatos();
-                case 2 -> CazaF35.mostrarDatos();
-                case 3 -> CazaJ20.mostrarDatos();
-                case 4 -> PortaavionesClaseNimitz.mostrarDatos();
-                case 5 -> PortaavionesClaseKusnetsov.mostrarDatos();
-                case 6 -> PortaavionesClaseQueenElizabeth.mostrarDatos();
-                case 7 -> System.out.println("Saliendo...");
+            if (elegir == 1) {
+                System.out.println("\nJugador 1, elige tu personaje:");
+                mostrarOpcionesPersonaje();
+                int eleccion1 = OpcionValida(lector, 1, 6);
+                lector.nextLine();
+                System.out.println("\nIngresa el nombre de tu aeronave: ");
+                String nombre1 = lector.nextLine();
+                Personaje jugador1 = crearPersonaje(eleccion1, nombre1);
+                
+                System.out.println("\nJugador 2, elige tu personaje:");
+                mostrarOpcionesPersonaje();
+                int eleccion2 = OpcionValida(lector, 1, 6);
+                lector.nextLine();
+                System.out.println("\nIngresa el nombre de tu aeronave: ");
+                String nombre2 = lector.nextLine();
+                Personaje jugador2 = crearPersonaje(eleccion2, nombre2);
+                
+                while (jugador1.getVida() > 0 && jugador2.getVida() > 0) {
+                    ejecutarTurno(jugador1, jugador2, lector);
+                    if (jugador2.getVida() <= 0 || jugador1.getVida() <= 0) break;
+                    ejecutarTurno(jugador2, jugador1, lector);
+                }
+                
+                System.out.println("\nHas luchado hasta el final, soldado. Ahora puedes descansar.");
+            } else if (elegir == 2) {
+                while (true) {
+                    System.out.println("Escoge el avión para ver sus características:");
+                    mostrarOpcionesPersonaje();
+                    System.out.println("'7' para volver al menú principal");
+                    int opcionn = OpcionValida(lector, 1, 7);
+                    
+                    if (opcionn == 7) break;
+                    
+                    switch (opcionn) {
+                        case 1 -> CazaF16.mostrarDatos();
+                        case 2 -> CazaF35.mostrarDatos();
+                        case 3 -> CazaJ20.mostrarDatos();
+                        case 4 -> PortaavionesClaseNimitz.mostrarDatos();
+                        case 5 -> PortaavionesClaseKusnetsov.mostrarDatos();
+                        case 6 -> PortaavionesClaseQueenElizabeth.mostrarDatos();
+                    }
+                }
+            } else {
+                System.out.println("Saliendo del juego...");
+                break;
             }
         }
     }
