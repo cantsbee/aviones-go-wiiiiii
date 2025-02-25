@@ -7,6 +7,7 @@ public abstract class Personaje {
     protected boolean activarHabilidad= false;
     protected boolean protegido= false;
     protected boolean esquivar= false;
+    protected int probabilidad=40;
     protected boolean contraataque=false;
     protected static final Random random = new Random();
     
@@ -31,23 +32,35 @@ public abstract class Personaje {
         this.vida = vida;
     }
     
-    public void recibirDanio(int danio) {
-        if(protegido){
-            danio/=2;
+    public void recibirDanio(int danio, Personaje atacante) {
+                if (esquivar) {
+                    int prob = random.nextInt(100);
+                    if (prob < probabilidad) {
+                        System.out.println(nombre + " Activo su habilidad de esquivar, evita el ataque enemigo!");
+                        esquivar= false;  
+                        return;
+                    } else {
+                        System.out.println(nombre + " No ha logrado esquivar el ataque enemigo");
+                        esquivar = false;
+                    }
+                }
+        
+                if (protegido) {
+                    danio /= 2;
+                    System.out.println(nombre + " Tiene activado su escudo, recibe solo " + danio + " de daño.");
+                    protegido = false;
+                }
+                vida -= danio;
+                if (vida < 0) vida = 0;
+                System.out.println(nombre + " Recibe " + danio + " de daño. Vida restante: " + vida);
+        
+                if (contraataque) {
+                    System.out.println(nombre + " Ha activado su habilidad de contraataque y genera " + danio + " de daño al enemigo");
+                    atacar(atacante);  
+                    contraataque = false; 
+                }
+            }
+        
+            public abstract void atacar(Personaje enemigo);
+            public abstract void activarHabilidad();
         }
-        if(esquivar){
-            danio=0;
-            System.out.println(nombre + "no recibe daño con su habilidad activa");
-        }
-        vida -= danio;
-        if (vida < 0) vida = 0;
-        System.out.println(nombre + " recibe " + danio + " de daño, te queda " + vida + " de vida.");
-    }
-    
-
-    public abstract void atacar(Personaje enemigo);
-    public abstract void activarHabilidad();
-}
-
-
-

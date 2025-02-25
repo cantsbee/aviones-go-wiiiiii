@@ -2,16 +2,16 @@ package juego;
 
 public class PortaavionesClasekusnetsov extends Portaaviones {
     public PortaavionesClasekusnetsov (String nombre) {
-        super(nombre, 90, 300, 400, "Misiles", 400, 600);
+        super(nombre, 90, 300, 630, "Misiles", 400, 600);
     }
     
     @Override
     public void atacar(Personaje enemigo) {
-        int[] danos = {30, 40, 50};
+        int[] danos = {15, 20, 24};
         int danio = danos[random.nextInt(danos.length)];
         String[] sonidos = {"¡Kaboom!", "¡Boom!", "¡Booom!"};
         System.out.println(sonidos[random.nextInt(sonidos.length)]);
-        enemigo.recibirDanio(danio);
+        enemigo.recibirDanio(danio,this);
     }
     @Override
     public int getVida(){
@@ -20,7 +20,7 @@ public class PortaavionesClasekusnetsov extends Portaaviones {
     @Override
     public void activarHabilidad() {
         protegido=true;
-        System.out.println(nombre + " activa Escudo Defensivo, reduce el daño recibido a la mitad!");
+        System.out.println(nombre + " Activa Escudo Defensivo, reduce el daño recibido a la mitad");
     }
     public static void mostrarDatos(){
         System.out.println("Las características de este portaaviones son: \n daño = {10, 20, 35}; \n capacidad de aviones: 90 \n blindaje: 300 \n vida=400");

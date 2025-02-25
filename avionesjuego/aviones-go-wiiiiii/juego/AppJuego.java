@@ -62,7 +62,7 @@ public class AppJuego {
                         case 2 -> CazaF35.mostrarDatos();
                         case 3 -> CazaJ20.mostrarDatos();
                         case 4 -> PortaavionesClaseNimitz.mostrarDatos();
-                        case 5 -> PortaavionesClaseKusnetsov.mostrarDatos();
+                        case 5 -> PortaavionesClasekusnetsov.mostrarDatos();
                         case 6 -> PortaavionesClaseQueenElizabeth.mostrarDatos();
                     }
                 }
@@ -112,7 +112,7 @@ public class AppJuego {
             case 2 -> new CazaF35(nombre);
             case 3 -> new CazaJ20(nombre);
             case 4 -> new PortaavionesClaseNimitz(nombre);
-            case 5 -> new PortaavionesClaseKusnetsov(nombre);
+            case 5 -> new PortaavionesClasekusnetsov(nombre);
             case 6 -> new PortaavionesClaseQueenElizabeth(nombre);
             default -> {
                 System.out.println("\nOpción incorrecta, se te asignará un avión por defecto (Caza J20)");

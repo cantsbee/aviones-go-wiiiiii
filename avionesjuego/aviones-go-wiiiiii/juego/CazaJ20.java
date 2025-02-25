@@ -1,6 +1,4 @@
-
 package juego;
-
 public class CazaJ20 extends Avion {
     protected static int[] Danios = {20, 40, 60};
     protected static String[] Sonidos = {"oaaa", "eeaa", "pumbaaa"};
@@ -17,12 +15,13 @@ public class CazaJ20 extends Avion {
         if(activarHabilidad){
             danio*=1.5;
         }
-        enemigo.recibirDanio(danio);
+        enemigo.recibirDanio(danio,this);
     
     }
     @Override
     public void activarHabilidad() {
-        System.out.println(nombre + " activa modo sigilo, el proximo ataque genera mas daño! ");
+        activarHabilidad = true;
+        System.out.println(nombre + " Activa ataque fantasma, el proximo ataque ignora la habilidad del enemigo! ");
     }
 
     public static void mostrarDatos() {

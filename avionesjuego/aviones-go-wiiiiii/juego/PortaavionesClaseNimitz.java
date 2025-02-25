@@ -7,11 +7,11 @@ public class PortaavionesClaseNimitz extends Portaaviones {
     
     @Override
     public void atacar(Personaje enemigo) {
-        int[] danos = {30, 40, 50};
+        int[] danos = {10, 17, 15};
         int danio = danos[random.nextInt(danos.length)];
         String[] sonidos = {"¡Kaboom!", "¡Boom!", "¡Booom!"};
         System.out.println(sonidos[random.nextInt(sonidos.length)]);
-        enemigo.recibirDanio(danio);
+        enemigo.recibirDanio(danio,this);
     }
     @Override
     public int getVida(){
@@ -19,8 +19,8 @@ public class PortaavionesClaseNimitz extends Portaaviones {
     }
     @Override
     public void activarHabilidad() {
-        protegido=true;
-        System.out.println(nombre + " activa Escudo Defensivo, reduce el daño recibido a la mitad!");
+        esquivar=true;
+        System.out.println(nombre + " tiene la probabilidad de esquivar el proximo ataque enemigo");
     }
     public static void mostrarDatos(){
         System.out.println("Las características de este portaaviones son: \n daño = {10, 20, 35}; \n capacidad de aviones: 90 \n blindaje: 300 \n vida=400");

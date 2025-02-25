@@ -8,7 +8,7 @@ public abstract class Portaaviones extends Personaje {
         int poder;
         
         public Portaaviones(String nombre, int capacidadAviones, int blindaje, int vida, String sistemaDefensa, int velocidad, int poder) {
-            super(nombre, 500);
+            super(nombre, vida);
             this.capacidadAviones = capacidadAviones;
             this.blindaje = blindaje;
         }

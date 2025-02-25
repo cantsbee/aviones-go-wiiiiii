@@ -1,4 +1,3 @@
-
 package juego;
 
 public class CazaF16 extends Avion {
@@ -17,7 +16,7 @@ public class CazaF16 extends Avion {
         if(activarHabilidad){
             danio*=2;
         }
-        enemigo.recibirDanio(danio);
+        enemigo.recibirDanio(danio,this);
         
     }
 
