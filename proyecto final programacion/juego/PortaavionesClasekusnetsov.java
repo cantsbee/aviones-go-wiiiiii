@@ -1,16 +1,18 @@
 package juego;
 
 public class PortaavionesClasekusnetsov extends Portaaviones {
+
+    protected static int[] Danios = {15, 20, 24};
+    protected static String[] Sonidos = {"¡Kaboom!", "¡Boom!", "¡Booom!"};
+
     public PortaavionesClasekusnetsov (String nombre) {
         super(nombre, 90, 300, 630, "Misiles", 400, 600);
     }
     
     @Override
     public void atacar(Personaje enemigo) {
-        int[] danos = {15, 20, 24};
-        int danio = danos[random.nextInt(danos.length)];
-        String[] sonidos = {"¡Kaboom!", "¡Boom!", "¡Booom!"};
-        System.out.println(sonidos[random.nextInt(sonidos.length)]);
+        int danio = Danios[random.nextInt(Danios.length)];
+        System.out.println(Sonidos[random.nextInt(Sonidos.length)]);
         enemigo.recibirDanio(danio,this);
     }
     @Override
