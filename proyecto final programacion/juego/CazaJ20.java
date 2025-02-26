@@ -23,7 +23,7 @@ public class CazaJ20 extends Avion {
     @Override
     public void activarHabilidad() {
         activarHabilidad = true;
-        System.out.println(nombre + " Activa ataque fantasma, el proximo ataque ignora la habilidad del enemigo! ");
+        System.out.println(nombre + " Activa ataque fantasma, el proximo ataque genera un poco mas de daño al enemigo! ");
     }
 
     public static void mostrarDatos() {
