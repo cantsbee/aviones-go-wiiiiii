@@ -27,7 +27,7 @@ public class CazaF16 extends Avion {
     }
 
     public static void mostrarDatos(){
-            System.out.println("Las características de este caza son: \n daño = {10, 20, 35}; \n velocidad= 900 \n maniobrabilidad= 85 \n vida=350");
+            System.out.println("Las características de este caza son: \n daño = {10, 20, 35}; \n velocidad= 900 \n maniobrabilidad= 85 \n vida=350\n vuela a una altura maxima de 15000 pies\n usa un armamento de misiles, su autonomia es de 60 horas  ");
 }
 
 }

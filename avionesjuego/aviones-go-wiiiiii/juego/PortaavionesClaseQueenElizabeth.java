@@ -2,7 +2,7 @@ package juego;
 
 public class PortaavionesClaseQueenElizabeth extends Portaaviones {
     public PortaavionesClaseQueenElizabeth(String nombre) {
-        super(nombre, 120, 500, 650, "Torpedos", 450, 550);
+        super(nombre, 120, 500, 650, "lanza cohetes", 450, 550);
     }
     
     @Override
@@ -23,7 +23,7 @@ public class PortaavionesClaseQueenElizabeth extends Portaaviones {
         System.out.println(nombre + " Contraataca al recibir daño");
     }
     public static void mostrarDatos(){
-        System.out.println("Las características de este portaaviones son: \n daño = {10, 20, 35}; \n capacidad de aviones: 90 \n blindaje: 300 \n vida=400");
+        System.out.println("Las características de este portaaviones son: \n daño = {11, 14, 16};\n capacidad de aviones: 120 \n blindaje: 500 puntos \n vida=650 puntos\n usa un sistema de defensa con lanza cohetes\ntiene una velocidad de 450 km/h\n y cuenta con un poder de 550 ");
     }
     
 }

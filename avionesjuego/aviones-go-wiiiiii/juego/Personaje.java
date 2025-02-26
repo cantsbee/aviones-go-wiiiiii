@@ -9,6 +9,8 @@ public abstract class Personaje {
     protected boolean esquivar= false;
     protected int probabilidad=40;
     protected boolean contraataque=false;
+    protected boolean defensa=false;
+    protected int probDefensa=50;
     protected static final Random random = new Random();
     
     public Personaje(String nombre, int vida) {
@@ -33,6 +35,20 @@ public abstract class Personaje {
     }
     
     public void recibirDanio(int danio, Personaje atacante) {
+
+
+
+        if(defensa){
+            int defprob=random.nextInt(100);
+            if(defprob<probDefensa){
+                System.out.println(" Has activado tu defensa, tienes la probabilidad de bloquear el proximo ataque");
+                defensa=true;
+                return;
+            }else{
+                System.out.println( " No has logrado bloquear el ataque enemigo");
+                defensa=false;
+            }
+        }
                 if (esquivar) {
                     int prob = random.nextInt(100);
                     if (prob < probabilidad) {
