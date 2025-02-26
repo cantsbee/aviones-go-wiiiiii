@@ -17,6 +17,7 @@ public class CazaF16 extends Avion {
             danio*=2;
         }
         enemigo.recibirDanio(danio,this);
+        activarHabilidad=false;
         
     }
 

@@ -199,7 +199,7 @@ public class AppJuego {
         System.out.println("\n*********************************************\n              BIENVENIDO AL JUEGO!        \n*********************************************\n");
         System.out.println("Hace años, la humanidad libró una gran guerra en los cielos. Las naciones cayeron y solo unos pocos pilotos de élite resistieron el avance del enemigo. Ahora, eres la última esperanza de la resistencia. Debes tomar los cielos, luchar con valentía y reclamar la victoria. ¿Estás listo para convertirte en leyenda?\n");
         
-        System.out.println("\nEl cielo es tu campo de batalla.\n\nLa guerra ha comenzado. ¿Estás listo para volar?\n");
+        System.out.println("\nEl cielo es tu campo de batalla.\nLa guerra ha comenzado. ¿Estás listo para volar?\n");
 
         while (true) {
             System.out.println("\n************************************************************************************************************\n");
@@ -338,7 +338,7 @@ public class AppJuego {
             System.out.println("\nHas elegido un portaaviones clase Nimitz\n");
             System.out.println("         ___________________________________________________");
             System.out.println("        |                                                   |");
-            System.out.println("        |             AIRCRAFT CARRIER                      |");
+            System.out.println("        |                   NIMITZ                          |");
             System.out.println("        |___________________________________________________|");
             System.out.println("         \\                                               /");
             System.out.println("          \\_____________________________________________/");
@@ -351,7 +351,7 @@ public class AppJuego {
             System.out.println("             |   \\");
             System.out.println("   _________________________");
             System.out.println("  |                         |");
-            System.out.println("  |    Portaaviones Kusnetsov   |");
+            System.out.println("  |        KUSNETSOV        |");
             System.out.println("  |_________________________|");
             System.out.println("      |  |      |  |      |  |");
             System.out.println("      |  |      |  |      |  |");
@@ -368,7 +368,7 @@ public class AppJuego {
             System.out.println("          |   \\");
             System.out.println("  _____________________");
             System.out.println(" |                     |");
-            System.out.println(" |      Queen Elizabeth   |");
+            System.out.println(" |   QUEEN ELIZABETH   |");
             System.out.println(" |_____________________|");
             System.out.println("    |  |    |  |    |  |");
             System.out.println("    |  |    |  |    |  |");
