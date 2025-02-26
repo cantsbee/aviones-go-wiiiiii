@@ -40,6 +40,7 @@ public abstract class Personaje {
         if(defensa){
             danio/=reduccionDefensa;
             System.out.println(nombre + " Tiene activado su defensa, recibe solo " + danio + " de daño.");
+            defensa=false;
         }
                 if (esquivar) {
                     int prob = random.nextInt(100);
