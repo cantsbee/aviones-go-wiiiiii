@@ -5,7 +5,7 @@ public class CazaF16 extends Avion {
     protected static String[] Sonidos = {"oaaa", "eeaa", "pumbaaa"};
 
     public CazaF16(String nombre) {
-        super(nombre, 900, 85, 350,15000,"Misiles",60);
+        super(nombre, 900, 85, 350,15000,"Misiles",60, 50);
     }
 
     @Override
