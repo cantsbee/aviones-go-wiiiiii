@@ -1,16 +1,18 @@
 package juego;
 
 public class PortaavionesClaseNimitz extends Portaaviones {
+    protected int[] danos = {10, 17, 15};
+    protected static String[] Sonidos = {"¡Kaboom!", "¡Boom!", "¡Booom!"};
     public PortaavionesClaseNimitz(String nombre) {
+       
         super(nombre, 120, 350, 600, "Misiles", 300, 620);
     }
     
     @Override
     public void atacar(Personaje enemigo) {
-        int[] danos = {10, 17, 15};
+       
         int danio = danos[random.nextInt(danos.length)];
-        String[] sonidos = {"¡Kaboom!", "¡Boom!", "¡Booom!"};
-        System.out.println(sonidos[random.nextInt(sonidos.length)]);
+        System.out.println(Sonidos[random.nextInt(Sonidos.length)]);
         enemigo.recibirDanio(danio,this);
     }
     @Override
