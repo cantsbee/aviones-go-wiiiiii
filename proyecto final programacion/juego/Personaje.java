@@ -11,6 +11,8 @@ public abstract class Personaje {
     protected boolean IgnorarDefensa = false;
     protected int probabilidadIgnorarDefensa = 45;
     protected boolean contraataque=false;
+    protected boolean defensa=false;
+    protected double reduccionDefensa=1.2;
     protected static final Random random = new Random();
     
     public Personaje(String nombre, int vida) {
@@ -35,6 +37,10 @@ public abstract class Personaje {
     }
     
     public void recibirDanio(int danio, Personaje atacante) {
+        if(defensa){
+            danio/=reduccionDefensa;
+            System.out.println(nombre + " Tiene activado su defensa, recibe solo " + danio + " de daño.");
+        }
                 if (esquivar) {
                     int prob = random.nextInt(100);
                     if (prob < probabilidad) {
@@ -62,9 +68,17 @@ public abstract class Personaje {
                     contraataque = false; 
                 }
             }
+
+            public void defender() {
+                int probabilidad2= random.nextInt(100);
+                if (probabilidad2 < 50) {
+                    defensa= true;
+                    System.out.println(nombre + " activa su defensa, reduciendo el daño en un porcentaje de " + reduccionDefensa + ".");
+                } else {
+                    System.out.println(nombre + " intenta defenderse, pero falla en activar su defensa.");
+                }
+            }
         
             public abstract void atacar(Personaje enemigo);
             public abstract void activarHabilidad();
-        }
-
-       
+    }
