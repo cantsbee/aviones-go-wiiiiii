@@ -8,8 +8,6 @@ public abstract class Personaje {
     protected boolean protegido= false;
     protected boolean esquivar= false;
     protected int probabilidad=40;
-    protected boolean IgnorarDefensa = false;
-    protected int probabilidadIgnorarDefensa = 45;
     protected boolean contraataque=false;
     protected boolean defensa=false;
     protected double reduccionDefensa=1.2;
