@@ -297,18 +297,90 @@ public class AppJuego {
     }
     
     public static Personaje crearPersonaje(int eleccion, String nombre) {
-        return switch (eleccion) {
-            case 1 -> new CazaF16(nombre);
-            case 2 -> new CazaF35(nombre);
-            case 3 -> new CazaJ20(nombre);
-            case 4 -> new PortaavionesClaseNimitz(nombre);
-            case 5 -> new PortaavionesClasekusnetsov(nombre);
-            case 6 -> new PortaavionesClaseQueenElizabeth(nombre);
-            default -> {
+         switch (eleccion) {
+            case 1 :
+            System.out.println("\nHas elegido un caza F16\n");
+            System.out.println("                __|__");
+            System.out.println("       ---o-----(_)--(_)-----o---");
+            System.out.println("            //             /");
+            System.out.println("            //    ___    /");
+            System.out.println("             //__/___//__/");
+            System.out.println("              |  _  |");
+            System.out.println("             /| | | |//");
+            System.out.println("            / | | | | //");
+            System.out.println("           |  | | | |  |");
+            System.out.println("           |__|_|_|_|__|");;
+           return new CazaF16(nombre);
+            case 2 : 
+            System.out.println("\nHas elegido un Caza F35\n");
+            System.out.println("             __|__");
+            System.out.println("      ------[==o==]------");
+            System.out.println("            /  |  //");
+            System.out.println("           /   |   //");
+            System.out.println("          /    |    //");
+            System.out.println("   ______/     |     //______");
+            System.out.println("  /            |            \\");
+            System.out.println(" |_____________|_____________|");
+            return new CazaF35(nombre);
+            case 3 :
+            System.out.println("\nHas elegidp un caza J20\n");
+            System.out.println("                ///");
+            System.out.println("         ______/  //______");
+            System.out.println("  -------|   [====]   |-------");
+            System.out.println("         //___      ___/");
+            System.out.println("             //____/");
+            System.out.println("            /      //" + "");
+            System.out.println("           /        //" + "");
+            System.out.println("          /__________//" + "");
+            return new CazaJ20(nombre);
+            case 4 : 
+            System.out.println("\nHas elegido un portaaviones clase Nimitz\n");
+            System.out.println("         ___________________________________________________");
+            System.out.println("        |                                                   |");
+            System.out.println("        |             AIRCRAFT CARRIER                      |");
+            System.out.println("        |___________________________________________________|");
+            System.out.println("         \\                                               /");
+            System.out.println("          \\_____________________________________________/");
+            
+            return new PortaavionesClaseNimitz(nombre);
+            case 5 : 
+            System.out.println("Has elegido un portaavion clase Kusnetsov");
+            System.out.println("             |");
+            System.out.println("             | \\");
+            System.out.println("             |  \\");
+            System.out.println("             |   \\");
+            System.out.println("   _________________________");
+            System.out.println("  |                         |");
+            System.out.println("  |    Portaaviones Kusnetsov   |");
+            System.out.println("  |_________________________|");
+            System.out.println("      |  |      |  |      |  |");
+            System.out.println("      |  |      |  |      |  |");
+            System.out.println("      |  |      |  |      |  |");
+            System.out.println("  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            System.out.println("      |        |        |        |");
+            System.out.println("      |________|________|________|");
+            
+            return new PortaavionesClasekusnetsov(nombre);
+            case 6 : 
+            System.out.println("has elegido un avion clase Queen Elizabeth");
+            System.out.println("          |");
+            System.out.println("          | \\");
+            System.out.println("          |  \\");
+            System.out.println("          |   \\");
+            System.out.println("  _____________________");
+            System.out.println(" |                     |");
+            System.out.println(" |      Queen Elizabeth   |");
+            System.out.println(" |_____________________|");
+            System.out.println("    |  |    |  |    |  |");
+            System.out.println("    |  |    |  |    |  |");
+            System.out.println("    |  |    |  |    |  |");
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            return new PortaavionesClaseQueenElizabeth(nombre);
+            default : 
                 System.out.println("\nOpción incorrecta, se te asignará un avión por defecto (Caza J20)");
-                yield new CazaJ20(nombre);
-            }
-        };
+                return new CazaJ20(nombre);
+            
+        }
     }
 }
 
