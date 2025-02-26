@@ -4,7 +4,7 @@ public class CazaJ20 extends Avion {
     protected static String[] Sonidos = {"oaaa", "eeaa", "pumbaaa"};
 
     public CazaJ20(String nombre) {
-        super(nombre, 1200, 95, 400,20000,"Municiones de ataque directo",120);
+        super(nombre, 1200, 95, 400,20000,"Municiones de ataque directo", 120, 50);
     }
 
     @Override
