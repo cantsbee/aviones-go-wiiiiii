@@ -13,9 +13,10 @@ public abstract class Personaje {
     protected int probDefensa=50;
     protected static final Random random = new Random();
     
-    public Personaje(String nombre, int vida) {
+    public Personaje(String nombre, int vida, int probDefensa) {
         this.nombre = nombre;
         this.vida = vida;
+        probDefensa = 50;
     }
     
     public String getNombre() {
